@@ -88,7 +88,8 @@
   <div class="w-full px-0 md:w-4/5">
     <div class="w-full px-1 md:px-0">
       <h2 class="font-bold text-xl md:text-3xl text-gray-500 text-center pb-4 md:pb-8">Click to copy command</h2>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 max-h-screen overflow-auto scrollbar-hide">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <!-- max-h-screen overflow-auto scrollbar-hide -->
         {#if animate}
           {#each filteredCmds as cmd, index (cmd.id)}
             <div

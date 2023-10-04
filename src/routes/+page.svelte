@@ -1,8 +1,9 @@
 <script>
   import Hero from "$lib/components/hero.svelte";
   import Head from "$lib/components/head.svelte";
-  import Commands from "$lib/components/commands.svelte";
   import { onMount } from "svelte";
+  import Commands from "$lib/components/commands.svelte";
+  import Nav from "$lib/components/nav.svelte";
 
   $: cc_s = "";
   $: tag_selected = "";
@@ -35,5 +36,7 @@
 </script>
 
 <Head url="/" title="Home | Common Command" />
+
+<Nav bind:cc_s on:input={handleSearch} />
 <Hero bind:cc_s on:input={handleSearch} commands={commands.data} />
 <Commands on:click={handleTags} {commands} {tag_selected} />
