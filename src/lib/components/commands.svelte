@@ -1,5 +1,4 @@
 <script>
-  // import zoom from '../zoom';
   import InfiniteScroll from "svelte-infinite-scroll";
   import { onMount } from "svelte";
   import { quintOut } from "svelte/easing";
@@ -92,7 +91,6 @@
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 max-h-screen overflow-auto scrollbar-hide">
         {#if animate}
           {#each filteredCmds as cmd, index (cmd.id)}
-            <!-- class:selected -->
             <div
               bind:this={node}
               class="w-full mb-4 md:mb-6 pb-0 transition-all"
@@ -100,6 +98,13 @@
               in:fly={{ x: 50 }}
             >
               <div class="rounded-2xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1 shadow-xl">
+                {#if copied === cmd.id}
+                  <div class=" relative">
+                    <span class="flex absolute h-3 w-3 z-10 right-12">
+                      <span class="relative inline-flex text-teal-400 text-base"> Copied! </span>
+                    </span>
+                  </div>
+                {/if}
                 <!-- svelte-ignore a11y-invalid-attribute -->
                 <a
                   class={`block rounded-xl bg-white p-4 sm:p-6 lg:p-8 relative ${copied === cmd.id ? "copied" : ""} `}

@@ -48,6 +48,5 @@
         {/if}
       </div>
     </div>
-    <!--End Search-->
   </div>
 </div>
