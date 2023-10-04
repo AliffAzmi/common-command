@@ -7,6 +7,7 @@
   $: cc_s = "";
   $: tag_selected = "";
   let commands = [];
+  
 
   const getCommands = async () => {
     const response = await fetch(`/api/commands?q=${cc_s}&tag=${tag_selected}`);
