@@ -17,7 +17,7 @@
   let page = 0;
   let size = 10;
   let copied = null;
-  let tags = ["artisan", "git", "linux", "npm", "ssh"];
+  let tags = ["artisan", "composer", "git", "linux", "npm", "ssh"];
 
   // $: filteredCmds = [...filteredCmds, ...commands.splice(size * page, size * (page + 1) - 1)];
 
